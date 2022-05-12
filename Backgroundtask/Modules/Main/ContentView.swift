@@ -5,7 +5,6 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var appDelegate: AppDelegate
-    @EnvironmentObject var sceneDelegate: SceneDelegate
     
     let service = BackgroundAPICaller()
     let scheduler = LocalNotificationScheduler()

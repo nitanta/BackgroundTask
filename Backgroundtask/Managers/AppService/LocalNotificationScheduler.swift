@@ -24,7 +24,7 @@ final class LocalNotificationScheduler {
     
     func scheduleNotifications(lists: [NotificationResponse]) {
         removePandingNotifications()
-        lists.filter { $0.scheduleDate > Date() }.forEach { item in
+        lists.forEach { item in
             
             let content = UNMutableNotificationContent()
             content.title = Global.appName
@@ -35,7 +35,7 @@ final class LocalNotificationScheduler {
             let trigger = UNCalendarNotificationTrigger(
                 dateMatching: Calendar.current.dateComponents(
                     [.day, .month, .year, .hour, .minute],
-                    from: item.scheduleDate),
+                    from: Date()),
                 repeats: false)
 
             // choose a random identifier

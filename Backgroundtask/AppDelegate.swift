@@ -5,6 +5,9 @@ import Foundation
 import UIKit
 import BackgroundTasks
 
+// e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"com.upwork.backgroundtask.notificationfetch"]
+
+
 class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -14,17 +17,6 @@ class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
         }
         configureUserNotifications()
         return true
-    }
-    
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        let sceneConfig = UISceneConfiguration(name: nil, sessionRole: connectingSceneSession.role)
-        sceneConfig.delegateClass = AppDelegate.self
-        return sceneConfig
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
 }
 
@@ -58,6 +50,7 @@ extension AppDelegate {
             switch result {
             case .success(let list):
                 notificationScheduler.scheduleNotifications(lists: list)
+                apiCaller.postNotificationData(list: list)
             case .failure:
                 break
             }
