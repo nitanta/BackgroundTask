@@ -23,6 +23,7 @@
 		50C362EC282D44CF000FE163 /* BackgroundAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362EB282D44CF000FE163 /* BackgroundAPICaller.swift */; };
 		50C362EE282D44DC000FE163 /* LocalNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362ED282D44DC000FE163 /* LocalNotificationScheduler.swift */; };
 		50C362F2282D4B04000FE163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362F1282D4B04000FE163 /* AppDelegate.swift */; };
+		50C362F4282D4FDC000FE163 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 50C362F3282D4FDC000FE163 /* Readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		50C362ED282D44DC000FE163 /* LocalNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationScheduler.swift; sourceTree = "<group>"; };
 		50C362EF282D4AB7000FE163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		50C362F1282D4B04000FE163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50C362F3282D4FDC000FE163 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		50C362B6282D3FF2000FE163 = {
 			isa = PBXGroup;
 			children = (
+				50C362F3282D4FDC000FE163 /* Readme.md */,
 				50C362C1282D3FF2000FE163 /* Backgroundtask */,
 				50C362C0282D3FF2000FE163 /* Products */,
 			);
@@ -245,6 +248,7 @@
 			files = (
 				50C362CA282D3FF3000FE163 /* Preview Assets.xcassets in Resources */,
 				50C362C7282D3FF3000FE163 /* Assets.xcassets in Resources */,
+				50C362F4282D4FDC000FE163 /* Readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
