@@ -11,6 +11,18 @@
 		50C362C5282D3FF2000FE163 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362C4282D3FF2000FE163 /* ContentView.swift */; };
 		50C362C7282D3FF3000FE163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50C362C6282D3FF3000FE163 /* Assets.xcassets */; };
 		50C362CA282D3FF3000FE163 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50C362C9282D3FF3000FE163 /* Preview Assets.xcassets */; };
+		50C362D4282D405C000FE163 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362D3282D405C000FE163 /* Global.swift */; };
+		50C362D6282D407C000FE163 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362D5282D407C000FE163 /* ErrorHandling.swift */; };
+		50C362D9282D409B000FE163 /* NotificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362D8282D409B000FE163 /* NotificationResponse.swift */; };
+		50C362DC282D40CC000FE163 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362DB282D40CC000FE163 /* Utilities.swift */; };
+		50C362DE282D40EB000FE163 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362DD282D40EB000FE163 /* StringExtension.swift */; };
+		50C362E1282D4113000FE163 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362E0282D4113000FE163 /* ApiProvider.swift */; };
+		50C362E3282D4128000FE163 /* AppEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362E2282D4128000FE163 /* AppEndpoint.swift */; };
+		50C362E6282D4144000FE163 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362E5282D4144000FE163 /* NotificationService.swift */; };
+		50C362E8282D42DE000FE163 /* SuccessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362E7282D42DE000FE163 /* SuccessResponse.swift */; };
+		50C362EC282D44CF000FE163 /* BackgroundAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362EB282D44CF000FE163 /* BackgroundAPICaller.swift */; };
+		50C362EE282D44DC000FE163 /* LocalNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362ED282D44DC000FE163 /* LocalNotificationScheduler.swift */; };
+		50C362F2282D4B04000FE163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362F1282D4B04000FE163 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +31,19 @@
 		50C362C4282D3FF2000FE163 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		50C362C6282D3FF3000FE163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50C362C9282D3FF3000FE163 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		50C362D3282D405C000FE163 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		50C362D5282D407C000FE163 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
+		50C362D8282D409B000FE163 /* NotificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationResponse.swift; sourceTree = "<group>"; };
+		50C362DB282D40CC000FE163 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		50C362DD282D40EB000FE163 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		50C362E0282D4113000FE163 /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		50C362E2282D4128000FE163 /* AppEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEndpoint.swift; sourceTree = "<group>"; };
+		50C362E5282D4144000FE163 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		50C362E7282D42DE000FE163 /* SuccessResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessResponse.swift; sourceTree = "<group>"; };
+		50C362EB282D44CF000FE163 /* BackgroundAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAPICaller.swift; sourceTree = "<group>"; };
+		50C362ED282D44DC000FE163 /* LocalNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationScheduler.swift; sourceTree = "<group>"; };
+		50C362EF282D4AB7000FE163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		50C362F1282D4B04000FE163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +76,14 @@
 		50C362C1282D3FF2000FE163 /* Backgroundtask */ = {
 			isa = PBXGroup;
 			children = (
+				50C362EF282D4AB7000FE163 /* Info.plist */,
+				50C362DF282D4106000FE163 /* Managers */,
+				50C362DA282D40BE000FE163 /* Helpers */,
+				50C362D2282D4050000FE163 /* Constants */,
+				50C362D1282D4018000FE163 /* Network */,
+				50C362D0282D4012000FE163 /* Modules */,
 				50C362C2282D3FF2000FE163 /* BackgroundtaskApp.swift */,
-				50C362C4282D3FF2000FE163 /* ContentView.swift */,
+				50C362F1282D4B04000FE163 /* AppDelegate.swift */,
 				50C362C6282D3FF3000FE163 /* Assets.xcassets */,
 				50C362C8282D3FF3000FE163 /* Preview Content */,
 			);
@@ -65,6 +96,93 @@
 				50C362C9282D3FF3000FE163 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		50C362D0282D4012000FE163 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				50C362F0282D4AED000FE163 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		50C362D1282D4018000FE163 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				50C362D7282D408E000FE163 /* APIModels */,
+				50C362D5282D407C000FE163 /* ErrorHandling.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		50C362D2282D4050000FE163 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				50C362D3282D405C000FE163 /* Global.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		50C362D7282D408E000FE163 /* APIModels */ = {
+			isa = PBXGroup;
+			children = (
+				50C362D8282D409B000FE163 /* NotificationResponse.swift */,
+				50C362E7282D42DE000FE163 /* SuccessResponse.swift */,
+			);
+			path = APIModels;
+			sourceTree = "<group>";
+		};
+		50C362DA282D40BE000FE163 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				50C362DB282D40CC000FE163 /* Utilities.swift */,
+				50C362DD282D40EB000FE163 /* StringExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		50C362DF282D4106000FE163 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				50C362EA282D44BA000FE163 /* AppService */,
+				50C362E4282D4138000FE163 /* APIService */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		50C362E4282D4138000FE163 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				50C362E0282D4113000FE163 /* ApiProvider.swift */,
+				50C362E2282D4128000FE163 /* AppEndpoint.swift */,
+				50C362E9282D44A9000FE163 /* Notification */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		50C362E9282D44A9000FE163 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				50C362E5282D4144000FE163 /* NotificationService.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		50C362EA282D44BA000FE163 /* AppService */ = {
+			isa = PBXGroup;
+			children = (
+				50C362EB282D44CF000FE163 /* BackgroundAPICaller.swift */,
+				50C362ED282D44DC000FE163 /* LocalNotificationScheduler.swift */,
+			);
+			path = AppService;
+			sourceTree = "<group>";
+		};
+		50C362F0282D4AED000FE163 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				50C362C4282D3FF2000FE163 /* ContentView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +255,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50C362EC282D44CF000FE163 /* BackgroundAPICaller.swift in Sources */,
+				50C362DC282D40CC000FE163 /* Utilities.swift in Sources */,
+				50C362E1282D4113000FE163 /* ApiProvider.swift in Sources */,
+				50C362DE282D40EB000FE163 /* StringExtension.swift in Sources */,
+				50C362F2282D4B04000FE163 /* AppDelegate.swift in Sources */,
 				50C362C5282D3FF2000FE163 /* ContentView.swift in Sources */,
+				50C362D9282D409B000FE163 /* NotificationResponse.swift in Sources */,
+				50C362D6282D407C000FE163 /* ErrorHandling.swift in Sources */,
+				50C362EE282D44DC000FE163 /* LocalNotificationScheduler.swift in Sources */,
 				50C362C3282D3FF2000FE163 /* BackgroundtaskApp.swift in Sources */,
+				50C362D4282D405C000FE163 /* Global.swift in Sources */,
+				50C362E6282D4144000FE163 /* NotificationService.swift in Sources */,
+				50C362E8282D42DE000FE163 /* SuccessResponse.swift in Sources */,
+				50C362E3282D4128000FE163 /* AppEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +400,7 @@
 				DEVELOPMENT_TEAM = CE53774E6S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Backgroundtask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +430,7 @@
 				DEVELOPMENT_TEAM = CE53774E6S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Backgroundtask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
