@@ -14,9 +14,7 @@ final class LocalNotificationScheduler {
     
     func requestPermission() {
         notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-            if success {
-                print("All set!")
-            } else if let error = error {
+            if success {} else if let error = error {
                 print(error.localizedDescription)
             }
         }
@@ -32,10 +30,11 @@ final class LocalNotificationScheduler {
             content.sound = UNNotificationSound.default
 
             // show this notification five seconds from now
+            let date = Date().addingTimeInterval(TimeInterval(60))
             let trigger = UNCalendarNotificationTrigger(
                 dateMatching: Calendar.current.dateComponents(
                     [.day, .month, .year, .hour, .minute],
-                    from: Date()),
+                    from: date),
                 repeats: false)
 
             // choose a random identifier

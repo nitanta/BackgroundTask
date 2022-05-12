@@ -26,6 +26,6 @@ struct Global {
     
     //Backgrounf task schedule time
     static var taskInterval: Int {
-        return 1 * 60 //20 minutes
+        return 2 * 60 //20 minutes
     }
 }
