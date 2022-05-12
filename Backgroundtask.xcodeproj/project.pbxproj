@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50A382E6282D57D5006762AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A382E5282D57D5006762AD /* SceneDelegate.swift */; };
 		50C362C3282D3FF2000FE163 /* BackgroundtaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362C2282D3FF2000FE163 /* BackgroundtaskApp.swift */; };
 		50C362C5282D3FF2000FE163 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C362C4282D3FF2000FE163 /* ContentView.swift */; };
 		50C362C7282D3FF3000FE163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50C362C6282D3FF3000FE163 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50A382E5282D57D5006762AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		50C362BF282D3FF2000FE163 /* Backgroundtask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Backgroundtask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C362C2282D3FF2000FE163 /* BackgroundtaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundtaskApp.swift; sourceTree = "<group>"; };
 		50C362C4282D3FF2000FE163 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				50C362D0282D4012000FE163 /* Modules */,
 				50C362C2282D3FF2000FE163 /* BackgroundtaskApp.swift */,
 				50C362F1282D4B04000FE163 /* AppDelegate.swift */,
+				50A382E5282D57D5006762AD /* SceneDelegate.swift */,
 				50C362C6282D3FF3000FE163 /* Assets.xcassets */,
 				50C362C8282D3FF3000FE163 /* Preview Content */,
 			);
@@ -264,6 +267,7 @@
 				50C362E1282D4113000FE163 /* ApiProvider.swift in Sources */,
 				50C362DE282D40EB000FE163 /* StringExtension.swift in Sources */,
 				50C362F2282D4B04000FE163 /* AppDelegate.swift in Sources */,
+				50A382E6282D57D5006762AD /* SceneDelegate.swift in Sources */,
 				50C362C5282D3FF2000FE163 /* ContentView.swift in Sources */,
 				50C362D9282D409B000FE163 /* NotificationResponse.swift in Sources */,
 				50C362D6282D407C000FE163 /* ErrorHandling.swift in Sources */,

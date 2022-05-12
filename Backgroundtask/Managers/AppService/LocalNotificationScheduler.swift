@@ -24,7 +24,7 @@ final class LocalNotificationScheduler {
     
     func scheduleNotifications(lists: [NotificationResponse]) {
         removePandingNotifications()
-        lists.filter { $0.scheduleDate >= Date() }.forEach { item in
+        lists.filter { $0.scheduleDate > Date() }.forEach { item in
             
             let content = UNMutableNotificationContent()
             content.title = Global.appName
@@ -32,14 +32,19 @@ final class LocalNotificationScheduler {
             content.sound = UNNotificationSound.default
 
             // show this notification five seconds from now
-            let trigger = UNCalendarNotificationTrigger(dateMatching: item.getComponents, repeats: false)
+            let trigger = UNCalendarNotificationTrigger(
+                dateMatching: Calendar.current.dateComponents(
+                    [.day, .month, .year, .hour, .minute],
+                    from: item.scheduleDate),
+                repeats: false)
 
             // choose a random identifier
-            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            let request = UNNotificationRequest(identifier: item.notificationId, content: content, trigger: trigger)
 
             // add our notification request
             notificationCenter.add(request)
         }
+        
     }
     
     func removePandingNotifications() {

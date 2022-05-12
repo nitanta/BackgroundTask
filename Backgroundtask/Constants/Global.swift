@@ -23,4 +23,9 @@ struct Global {
     static var apiKey: String {
         return "Bl^ESKY!INT@GRV"
     }
+    
+    //Backgrounf task schedule time
+    static var taskInterval: Int {
+        return 1 * 60 //20 minutes
+    }
 }
