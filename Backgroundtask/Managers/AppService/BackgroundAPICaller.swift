@@ -42,7 +42,7 @@ extension BackgroundAPICaller {
     func postNotificationData(list: [NotificationResponse]) {
         list.forEach { item in
             self.sendNotification(id: item.notificationId) { result in
-                
+                print("Post notification success")
             }
         }
     }

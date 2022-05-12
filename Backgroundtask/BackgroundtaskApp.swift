@@ -15,6 +15,7 @@ struct BackgroundtaskApp: App {
             switch newValue {
             case .background:
                 appDelegate.scheduleBackgroundRateFetch()
+                print("Background task registered")
             @unknown default:
                 break
             }

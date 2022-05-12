@@ -83,10 +83,8 @@ enum AppEndpoint: EndpointProtocol {
     
     var encoding: ParameterEncoding {
         switch self {
-        case .fetchNotifications:
+        case .fetchNotifications, .sendNotificationData:
             return .url
-        case .sendNotificationData:
-            return .json
         }
     }
 }

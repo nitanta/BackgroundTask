@@ -5,8 +5,7 @@ import Foundation
 import UIKit
 import BackgroundTasks
 
-// e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"com.upwork.backgroundtask.notificationfetch"]
-
+// e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"com.upwork.backgroundtask.notificationfetch"]
 
 class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
     
@@ -65,9 +64,9 @@ extension AppDelegate {
         rateFetchTask.earliestBeginDate = Date(timeIntervalSinceNow: TimeInterval(Global.taskInterval))
         
         do {
-          try BGTaskScheduler.shared.submit(rateFetchTask)
+            try BGTaskScheduler.shared.submit(rateFetchTask)
         } catch {
-          print("Unable to submit task: \(error.localizedDescription)")
+            print("Unable to submit task: \(error.localizedDescription)")
         }
     }
 }
