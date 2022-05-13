@@ -13,14 +13,14 @@ struct ContentView: View {
         Text("Hello, world!")
             .padding()
             .onAppear {
-                service.fetchNotification(completion: { result in
-                    switch result {
-                    case .success(let list):
-                        scheduler.scheduleNotifications(lists: list)
-                        service.postNotificationData(list: list)
-                    default: break
-                    }
-                })
+//                service.fetchNotification(completion: { result in
+//                    switch result {
+//                    case .success(let list):
+//                        scheduler.scheduleNotifications(lists: list)
+//                        service.postNotificationData(list: list)
+//                    default: break
+//                    }
+//                })
             }
     }
 }
