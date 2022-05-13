@@ -3,12 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
-	<array/>
-    <key>BGTaskSchedulerPermittedIdentifiers</key>
-    <array>
-        <string>com.upwork.backgroundtask.notificationfetch</string>
-        <string>com.upwork.backgroundtask.notificationsave</string>
-    </array>
+	<array>
+		<string>com.upwork.notificationfetch</string>
+		<string>com.upwork.notificationsave</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
