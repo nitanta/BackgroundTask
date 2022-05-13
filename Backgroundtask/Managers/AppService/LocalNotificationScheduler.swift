@@ -30,10 +30,11 @@ final class LocalNotificationScheduler {
             content.sound = UNNotificationSound.default
 
             // show this notification five seconds from now
-            let date = Date().addingTimeInterval(TimeInterval(30))
+            let date = Date().addingTimeInterval(TimeInterval(5))
+            print("Notification on", date)
             let trigger = UNCalendarNotificationTrigger(
                 dateMatching: Calendar.current.dateComponents(
-                    [.day, .month, .year, .hour, .minute],
+                    [.day, .month, .year, .hour, .minute, .second],
                     from: date),
                 repeats: false)
 
@@ -41,7 +42,11 @@ final class LocalNotificationScheduler {
             let request = UNNotificationRequest(identifier: item.notificationId, content: content, trigger: trigger)
 
             // add our notification request
-            notificationCenter.add(request)
+            notificationCenter.add(request) { error in
+                if let error = error {
+                    debugPrint("Notification add error", error.localizedDescription)
+                }
+            }
         }
         
     }

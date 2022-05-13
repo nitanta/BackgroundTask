@@ -8,6 +8,8 @@ import BackgroundTasks
 // e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"com.upwork.notificationfetch"]
 
 class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
+    let service = BackgroundAPICaller()
+    let scheduler = LocalNotificationScheduler()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.upwork.notificationfetch", using: .main) { [weak self] (task) in
@@ -41,15 +43,13 @@ extension AppDelegate {
         task.expirationHandler = {
             task.setTaskCompleted(success: false)
         }
-
-        let apiCaller = BackgroundAPICaller()
-        let notificationScheduler = LocalNotificationScheduler()
         
-        apiCaller.fetchNotification { result in
+        self.service.fetchNotification { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let list):
-                notificationScheduler.scheduleNotifications(lists: list)
-                apiCaller.postNotificationData(list: list)
+                self.scheduler.scheduleNotifications(lists: list)
+                self.service.postNotificationData(list: list)
             case .failure:
                 break
             }
