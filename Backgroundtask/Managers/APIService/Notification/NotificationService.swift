@@ -5,7 +5,7 @@ import Foundation
 
 protocol NotificationServiceProtocol {
     func fetchNotification() -> AnyPublisher<[NotificationResponse], Error>
-    func sendMotificationData(id: String) -> AnyPublisher<SuccessResponse, Error>
+    func sendNotificationId(id: String, completion: @escaping (Result<SuccessResponse, Error>) -> Void)
 }
 
 
@@ -31,19 +31,28 @@ class NotificationService: NotificationServiceProtocol {
         .eraseToAnyPublisher()
     }
     
-    func sendMotificationData(id: String) -> AnyPublisher<SuccessResponse, Error> {
-        return apiProvider.getData(
-            from: .sendNotificationData(notificationId: id)
-        )
-        .decode(type: SuccessResponse.self, decoder: Container.jsonDecoder)
-        .receive(on: RunLoop.main)
-        .mapError({ error -> Error in
-            return error
-        })
-        .map{
-            return $0
+    func sendNotificationId(id: String, completion: @escaping (Result<SuccessResponse, Error>) -> Void) {
+        
+        guard let request = apiProvider.performRequest(for: .sendNotificationData(notificationId: id)) else {
+            return completion(.failure(APIProviderErrors.invalidURL))
         }
-        .eraseToAnyPublisher()
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                return completion(.failure(error))
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {
+                return completion(.failure(APIProviderErrors.customError("Invalid status code")))
+            }
+            
+            if let data = data, let response = try? JSONDecoder().decode(SuccessResponse.self, from: data) {
+                return completion(.success(response))
+            }
+        }
+        
+        task.resume()
     }
     
 }

@@ -26,15 +26,7 @@ final class BackgroundAPICaller {
     }
     
     func sendNotification(id: String, completion: @escaping (Result<SuccessResponse, Error>) -> Void) {
-        self.service.sendMotificationData(id: id).sink { (error) in
-            switch error {
-            case .failure(let error):
-                completion(.failure(APIProviderErrors.customError(error.localizedDescription)))
-            case .finished: break
-            }
-        } receiveValue: { (response) in
-            completion(.success(response))
-        }.store(in: &bag)
+        self.service.sendNotificationId(id: id) { result in }
     }
 }
 

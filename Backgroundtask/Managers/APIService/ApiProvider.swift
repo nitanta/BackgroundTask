@@ -45,7 +45,7 @@ class APIProvider<Endpoint: EndpointProtocol> {
     /// Build the url request for the endpoint
     /// - Parameter endpoint: endpoint
     /// - Returns: urlrequest for the endpoint
-    private func performRequest(for endpoint: Endpoint) -> URLRequest? {
+    func performRequest(for endpoint: Endpoint) -> URLRequest? {
         guard var urlComponents = URLComponents(string: endpoint.absoluteURL) else {
             return nil
         }
