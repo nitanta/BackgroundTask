@@ -10,18 +10,20 @@ struct ContentView: View {
     let scheduler = LocalNotificationScheduler()
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-            .onAppear {
-//                service.fetchNotification(completion: { result in
-//                    switch result {
-//                    case .success(let list):
-//                        scheduler.scheduleNotifications(lists: list)
-//                        service.postNotificationData(list: list)
-//                    default: break
-//                    }
-//                })
+        Button("Simulate process") {
+            simulateFlow()
+        }
+    }
+    
+    func simulateFlow() {
+        service.fetchNotification(completion: { result in
+            switch result {
+            case .success(let list):
+                scheduler.scheduleNotifications(lists: list)
+                service.postNotificationData(list: list)
+            default: break
             }
+        })
     }
 }
 

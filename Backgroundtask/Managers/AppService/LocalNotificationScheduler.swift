@@ -30,7 +30,7 @@ final class LocalNotificationScheduler {
             content.sound = UNNotificationSound.default
 
             // show this notification five seconds from now
-            let date = Date().addingTimeInterval(TimeInterval(60))
+            let date = Date().addingTimeInterval(TimeInterval(30))
             let trigger = UNCalendarNotificationTrigger(
                 dateMatching: Calendar.current.dateComponents(
                     [.day, .month, .year, .hour, .minute],
