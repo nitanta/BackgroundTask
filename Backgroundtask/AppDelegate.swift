@@ -41,7 +41,7 @@ extension AppDelegate {
     /// - Parameter task: task for the background operation
     func handleAppRefreshTask(task: BGAppRefreshTask) {
         task.expirationHandler = {
-            task.setTaskCompleted(success: false)
+            task.setTaskCompleted(success: true)
         }
         
         self.service.fetchNotification { [weak self] result in
