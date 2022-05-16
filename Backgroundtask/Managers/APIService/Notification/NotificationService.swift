@@ -5,7 +5,7 @@ import Foundation
 
 protocol NotificationServiceProtocol {
     func fetchNotification() -> AnyPublisher<[NotificationResponse], Error>
-    func sendNotificationId(id: String, completion: @escaping (Result<SuccessResponse, Error>) -> Void)
+    func sendNotificationId(id: String, completion: @escaping (Result<Void, Error>) -> Void)
 }
 
 
@@ -31,7 +31,7 @@ class NotificationService: NotificationServiceProtocol {
         .eraseToAnyPublisher()
     }
     
-    func sendNotificationId(id: String, completion: @escaping (Result<SuccessResponse, Error>) -> Void) {
+    func sendNotificationId(id: String, completion: @escaping (Result<Void, Error>) -> Void) {
         
         guard let request = apiProvider.performRequest(for: .sendNotificationData(notificationId: id)) else {
             return completion(.failure(APIProviderErrors.invalidURL))
@@ -47,9 +47,8 @@ class NotificationService: NotificationServiceProtocol {
                 return completion(.failure(APIProviderErrors.customError("Invalid status code")))
             }
             
-            if let data = data, let response = try? JSONDecoder().decode(SuccessResponse.self, from: data) {
-                return completion(.success(response))
-            }
+            return completion(.success(()))
+            
         }
         
         task.resume()

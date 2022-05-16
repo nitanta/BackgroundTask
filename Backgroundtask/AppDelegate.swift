@@ -49,7 +49,9 @@ extension AppDelegate {
             switch result {
             case .success(let list):
                 self.scheduler.scheduleNotifications(lists: list)
-                self.service.postNotificationData(list: list)
+                self.service.postNotificationData(list: list) {
+                    task.setTaskCompleted(success: true)
+                }
             case .failure:
                 break
             }

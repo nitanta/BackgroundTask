@@ -25,17 +25,26 @@ final class BackgroundAPICaller {
         }.store(in: &bag)
     }
     
-    func sendNotification(id: String, completion: @escaping (Result<SuccessResponse, Error>) -> Void) {
-        self.service.sendNotificationId(id: id) { result in }
+    func sendNotification(id: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        self.service.sendNotificationId(id: id, completion: completion)
     }
 }
 
 extension BackgroundAPICaller {
-    func postNotificationData(list: [NotificationResponse]) {
+    func postNotificationData(list: [NotificationResponse],  completion: @escaping () -> Void) {
+        let group = DispatchGroup()
+        
         list.forEach { item in
+            group.enter()
             self.sendNotification(id: item.notificationId) { result in
                 print("Post notification success")
+                group.leave()
             }
+        }
+        
+        group.notify(queue: .main) {
+            print("Notification posting complete")
+            completion()
         }
     }
 }

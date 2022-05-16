@@ -20,7 +20,9 @@ struct ContentView: View {
             switch result {
             case .success(let list):
                 scheduler.scheduleNotifications(lists: list)
-                service.postNotificationData(list: list)
+                service.postNotificationData(list: list) {
+                    debugPrint("Simulation completed")
+                }
             default: break
             }
         })
