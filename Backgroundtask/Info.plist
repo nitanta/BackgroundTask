@@ -4,8 +4,8 @@
 <dict>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
-		<string>com.upwork.notificationfetch</string>
-		<string>com.upwork.notificationsave</string>
+		<string>com.upstem.notificationfetch</string>
+		<string>com.upstem.notificationsave</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

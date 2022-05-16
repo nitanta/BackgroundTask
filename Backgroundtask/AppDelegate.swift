@@ -12,7 +12,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
     let scheduler = LocalNotificationScheduler()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.upwork.notificationfetch", using: .main) { [weak self] (task) in
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.upstem.notificationfetch", using: .main) { [weak self] (task) in
             guard let self = self else { return }
             self.handleAppRefreshTask(task: task as! BGAppRefreshTask)
         }
@@ -62,7 +62,7 @@ extension AppDelegate {
     
     /// Schedule background tasks
     func scheduleBackgroundRateFetch() {
-        let rateFetchTask = BGAppRefreshTaskRequest(identifier: "com.upwork.notificationfetch")
+        let rateFetchTask = BGAppRefreshTaskRequest(identifier: "com.upstem.notificationfetch")
         rateFetchTask.earliestBeginDate = Date(timeIntervalSinceNow: TimeInterval(Global.taskInterval))
         
         do {
