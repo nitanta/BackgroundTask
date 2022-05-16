@@ -5,7 +5,7 @@ import Foundation
 import UIKit
 import BackgroundTasks
 
-// e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"com.upwork.notificationfetch"]
+// e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"com.upstem.notificationfetch"]
 
 class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
     let service = BackgroundAPICaller()
